@@ -48,8 +48,6 @@ body .redactor_box_fullscreen {
 	resize: none;
 }
 
-.redactor_editor,
-.redactor_editor:focus,
 .redactor_editor div,
 .redactor_editor p,
 .redactor_editor ul,
@@ -63,7 +61,7 @@ body .redactor_box_fullscreen {
 .redactor_editor h3,
 .redactor_editor h4,
 .redactor_editor h5 {
-	font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif !important;
+	font-family: inherit;
 }
 
 .redactor_editor code,
