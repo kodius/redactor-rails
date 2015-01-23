@@ -8,7 +8,7 @@ This gem bundles Redactor version 9.1.9 which is the most recent version as of D
 
 Add this line to your application's Gemfile:
 
-    gem 'redactor-rails-paperclip', github: "artursbraucs/redactor-rails-paperclip"
+    gem 'redactor-rails', github: "artursbraucs/redactor-rails"
 
 And then execute:
 
