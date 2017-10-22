@@ -16,4 +16,6 @@ window.init_redactor = function(){
 }
 
 $(document).ready( window.init_redactor );
-$(window).bind('page:change', window.init_redactor);
+document.addEventListener("turbolinks:load", function() {
+  window.init_redactor();
+});
