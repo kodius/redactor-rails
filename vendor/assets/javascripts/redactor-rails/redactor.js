@@ -770,7 +770,6 @@
 
 			// set no editable
 			this.setNonEditable();
-			this.setSpansVerified();
 			this.sync();
 		},
 		setCodeIframe: function(html)
@@ -924,14 +923,6 @@
 
 			// remove font
 			html = html.replace(/<font(.*?)>([\w\W]*?)<\/font>/gi, '$2');
-
-			// remove spans
-			html = html.replace(/<span(.*?)>([\w\W]*?)<\/span>/gi, '$2');
-			html = html.replace(/<inline>/gi, '<span>');
-			html = html.replace(/<inline /gi, '<span ');
-			html = html.replace(/<\/inline>/gi, '</span>');
-			html = html.replace(/<span(.*?)class="redactor_placeholder"(.*?)>([\w\W]*?)<\/span>/gi, '');
-			html = html.replace(/<span>([\w\W]*?)<\/span>/gi, '$1');
 
 			// fixes
 			html = html.replace(/&amp;/gi, '&');
@@ -3925,7 +3916,7 @@
 			}
 			else
 			{
-				el = $('<inline>').append($(s).contents());
+				el = $('<span>').append($(s).contents());
 				$(s).replaceWith(el);
 			}
 
@@ -4175,7 +4166,7 @@
 
 			if (node.tagName == 'SPAN')
 			{
-				var replacementTag = 'inline';
+				var replacementTag = 'span';
 
 			    var outer = node.outerHTML;
 
